@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agende sua Reunião Estratégica Gratuita</title>
+</head>
+<body>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1631112531362323');
+fbq('track', 'PageView');
+</script>
+<script id="funnel-booking-redirect">
+  (function () {
+    function registerBookingRedirect() {
+      if (!window.Cal || !Cal.ns || !Cal.ns["reuniao-gratuita"]) {
+        window.setTimeout(registerBookingRedirect, 100);
+        return;
+      }
+
+      Cal.ns["reuniao-gratuita"]("on", {
+        action: "bookingSuccessfulV2",
+        callback: function () {
+          if (typeof window.fbq === "function") {
+            window.fbq("track", "Schedule");
+          }
+          window.location.assign("LP%20Obrigado.html");
+        }
+      });
+    }
+
+    registerBookingRedirect();
+  })();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1631112531362323&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+  /* ─── RESET ESCOPADO ─── */
+  .dmp-wrap *, .dmp-wrap *::before, .dmp-wrap *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ─── ELEMENTOR: garante que o widget não corte o conteúdo ─── */
+  .elementor-widget-html,
+  .elementor-widget-container {
+    overflow: visible !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* ─── ELEMENTOR: reset de containers do tema ─── */
+  .elementor-section.elementor-section-boxed > .elementor-container,
+  .elementor-section > .elementor-container,
+  .e-con,
+  .e-con-inner {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .dmp-wrap {
+    /* ─── ELEMENTOR: técnica full-bleed ─── */
+    position: relative;
+    left: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    /* Paleta */
+    --c-base:          #000000;
+    --c-base-deep:     #000000;
+    --c-base-card:     rgba(0,0,0,0.4);
+    --c-accent:        #808080;
+    --c-accent-glow:   rgba(128,128,128,0.4);
+    --c-accent-bg:     rgba(128,128,128,0.1);
+    --c-accent-border: rgba(128,128,128,0.28);
+    --c-success:       #C2A674;
+    --c-success-glow:  rgba(194,166,116,0.4);
+    --c-success-bg:    rgba(194,166,116,0.1);
+    --c-success-border:rgba(194,166,116,0.3);
+    --c-red:           #e63946;
+    --c-text:          #ffffff;
+    --c-text-soft:     rgba(255, 255, 255, 0.88);
+    --c-text-muted:    rgba(255, 255, 255, 0.60);
+    --c-card-border:   rgba(128,128,128,0.28);
+
+    --font:    'Poppins', system-ui, sans-serif;
+    --pad-x:   clamp(24px, 5vw, 80px);
+    --pad-y:   clamp(40px, 5vw, 64px);
+    --gap:     clamp(20px, 2.5vw, 36px);
+    --fs-h1:   clamp(24px, 3vw, 44px);
+    --fs-h2:   clamp(16px, 1.6vw, 22px);
+    --fs-body: clamp(13px, 1.2vw, 15px);
+    --fs-sm:   clamp(11px, 1vw, 13px);
+    --fs-xs:   clamp(10px, 0.9vw, 11px);
+    --r-lg:    22px;
+    --r-md:    14px;
+
+    display: block;
+    background: var(--c-base);
+    color: var(--c-text);
+    font-family: var(--font);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  /* ─── BACKGROUND (gerado pela frontend-design) ─── */
+  .dmp-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 70% 55% at 50% -8%, rgba(194,166,116,0.16), transparent 62%),
+      linear-gradient(180deg, #050505 0%, #000000 55%, #0a0806 100%);
+  }
+
+  .dmp-bg-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background-image:
+      repeating-linear-gradient(115deg, rgba(128,128,128,0.06) 0px, rgba(128,128,128,0.06) 1px, transparent 1px, transparent 72px),
+      repeating-linear-gradient(25deg, rgba(128,128,128,0.045) 0px, rgba(128,128,128,0.045) 1px, transparent 1px, transparent 72px);
+    mask-image: radial-gradient(ellipse 85% 75% at 50% 25%, black 35%, transparent 88%);
+    -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 25%, black 35%, transparent 88%);
+  }
+
+  .dmp-bg-glow::before {
+    content: '';
+    position: absolute;
+    width: 58vw; height: 58vw;
+    max-width: 780px; max-height: 780px;
+    left: 50%; top: -20%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(194,166,116,0.32) 0%, rgba(194,166,116,0) 70%);
+    filter: blur(65px);
+    animation: dmpDrift 26s ease-in-out infinite alternate;
+  }
+
+  .dmp-bg-glow::after {
+    content: '';
+    position: absolute;
+    width: 42vw; height: 42vw;
+    max-width: 560px; max-height: 560px;
+    right: -10%; bottom: -16%;
+    background: radial-gradient(circle, rgba(128,128,128,0.20) 0%, rgba(128,128,128,0) 70%);
+    filter: blur(70px);
+    animation: dmpDrift2 32s ease-in-out infinite alternate;
+  }
+
+  @keyframes dmpDrift {
+    0%   { transform: translate(-50%,0) scale(1); }
+    100% { transform: translate(-46%,4%) scale(1.08); }
+  }
+
+  @keyframes dmpDrift2 {
+    0%   { transform: translate(0,0) scale(1); }
+    100% { transform: translate(-4%,-5%) scale(1.1); }
+  }
+
+  .dmp-bg-noise {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.045;
+    background-image: repeating-conic-gradient(rgba(255,255,255,0.5) 0% 0.5%, transparent 0% 1%);
+    background-size: 3px 3px;
+    mix-blend-mode: overlay;
+  }
+
+  /* ─── INNER ─── */
+  .dmp-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--pad-y) var(--pad-x);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ─── HERO ─── */
+  .dmp-hero {
+    text-align: center;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto clamp(28px, 3.5vw, 48px);
+    animation: fadeUp 0.7s ease both;
+  }
+
+  .dmp-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(230,57,70,0.14);
+    border: 1px solid rgba(230,57,70,0.32);
+    color: #fff;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 100px;
+    margin-bottom: clamp(16px, 2.5vw, 28px);
+  }
+
+  .dmp-tag::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: var(--c-red);
+    border-radius: 50%;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,100%{ opacity:1; box-shadow:0 0 0 0 rgba(230,57,70,0.7) }
+    50%    { opacity:0.7; box-shadow:0 0 0 8px rgba(230,57,70,0) }
+  }
+
+  .dmp-hero h1 {
+    font-size: var(--fs-h1);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: clamp(12px, 1.8vw, 20px);
+    overflow-wrap: break-word;
+    text-wrap: balance;
+  }
+
+  .dmp-hero-sub {
+    font-size: var(--fs-body);
+    color: var(--c-text-soft);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ─── COLUNAS ─── */
+  .dmp-cols {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: var(--gap);
+    align-items: start;
+    width: 100%;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  /* ─── CARD BASE ─── */
+  .dmp-card {
+    background: var(--c-base-card);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--c-card-border);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    min-width: 0;
+    box-shadow:
+      0 8px 24px rgba(0,0,0,0.22),
+      0 24px 64px rgba(0,0,0,0.32),
+      inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+
+  /* Card direito sticky no desktop */
+  .dmp-cols > .dmp-card:nth-child(2) {
+    position: sticky;
+    top: 20px;
+  }
+
+  .dmp-card-head {
+    padding: clamp(16px, 2vw, 24px) clamp(18px, 2.4vw, 28px);
+    border-bottom: 1px solid var(--c-card-border);
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 1.4vw, 15px);
+  }
+
+  .dmp-card-icon {
+    width: clamp(36px, 3.5vw, 44px);
+    height: clamp(36px, 3.5vw, 44px);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--c-accent-border);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(16px, 1.6vw, 19px);
+    flex-shrink: 0;
+  }
+
+  .dmp-card-meta { min-width: 0; flex: 1; }
+
+  .dmp-card-tag {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: 3px;
+  }
+
+  .dmp-card-title {
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    line-height: 1.25;
+    color: #fff;
+    overflow-wrap: break-word;
+  }
+
+  /* ─── CALENDÁRIO EMBED ─── */
+  .dmp-cal-body {
+    padding: 0;
+    background: #0a0a0a;
+    border-radius: 0 0 var(--r-lg) var(--r-lg);
+    overflow: hidden;
+    position: relative;
+    height: 680px;
+    min-height: 680px;
+  }
+
+  .dmp-cal-body iframe,
+  .dmp-cal-body > div {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 680px;
+  }
+
+  .dmp-loader {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 2;
+    background: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  .dmp-loader.hidden { opacity: 0; }
+  .dmp-loader p { font-size: 13px; color: rgba(255,255,255,0.55); font-family: var(--font); }
+
+  .dmp-spinner {
+    width: 36px; height: 36px;
+    border: 3px solid rgba(255,255,255,0.12);
+    border-top-color: var(--c-success);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ─── BENEFÍCIOS ─── */
+  .dmp-benefits-body { padding: clamp(18px, 2.2vw, 28px); }
+
+  .dmp-benefits-intro {
+    font-size: var(--fs-sm);
+    color: var(--c-text-muted);
+    margin-bottom: clamp(14px, 1.8vw, 22px);
+    line-height: 1.6;
+  }
+
+  .dmp-benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 1.2vw, 14px);
+  }
+
+  .dmp-benefit {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--r-md);
+    padding: clamp(12px, 1.4vw, 17px);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: center;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  }
+
+  .dmp-benefit:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: var(--c-accent-border);
+    transform: translateX(3px);
+  }
+
+  .dmp-check {
+    width: 27px; height: 27px;
+    background: var(--c-success);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-base);
+    font-weight: 800;
+    font-size: 13px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px var(--c-success-glow);
+  }
+
+  .dmp-benefit-text {
+    font-size: var(--fs-body);
+    color: var(--c-text-soft);
+    line-height: 1.5;
+    font-weight: 500;
+    overflow-wrap: break-word;
+  }
+
+  .dmp-benefit-text strong { color: #fff; font-weight: 700; }
+
+  /* ─── INSTRUÇÃO ─── */
+  .dmp-instruction {
+    margin-top: clamp(16px, 2vw, 24px);
+    padding: clamp(14px, 1.6vw, 18px) clamp(14px, 1.8vw, 20px);
+    background: var(--c-success-bg);
+    border: 1px solid var(--c-success-border);
+    border-radius: var(--r-md);
+    text-align: center;
+  }
+
+  .dmp-instruction p {
+    font-size: var(--fs-sm);
+    color: var(--c-text-soft);
+    line-height: 1.6;
+  }
+
+  .dmp-instruction p strong { color: var(--c-success); font-weight: 700; }
+
+  /* ─── FOOTER ─── */
+  .dmp-footer {
+    text-align: center;
+    margin-top: clamp(32px, 4vw, 48px);
+    padding-top: clamp(20px, 2.5vw, 28px);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    color: var(--c-text-muted);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* ─── ANIMAÇÕES ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── RESPONSIVO ─── */
+  @media (max-width: 960px) {
+    .dmp-cols { grid-template-columns: 1fr; }
+    .dmp-cols > .dmp-card:nth-child(2) {
+      position: static;
+      order: 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .dmp-wrap {
+      --fs-h1:   clamp(18px, 5.5vw, 24px);
+      --fs-body: clamp(13px, 3.8vw, 15px);
+    }
+
+    .dmp-hero { max-width: 100% !important; }
+    .dmp-hero h1 { line-height: 1.1; }
+    .dmp-hero-sub { max-width: 100%; font-size: clamp(13px, 3.8vw, 15px); }
+
+    .dmp-cal-body,
+    .dmp-cal-body iframe,
+    .dmp-cal-body > div { height: 600px; min-height: 600px; }
+
+    .dmp-benefit:hover { transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dmp-wrap *, .dmp-wrap *::before, .dmp-wrap *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+<div class="dmp-wrap">
+  <div class="dmp-bg"       aria-hidden="true"></div>
+  <div class="dmp-bg-glow"  aria-hidden="true"></div>
+  <div class="dmp-bg-noise" aria-hidden="true"></div>
+
+  <div class="dmp-inner">
+
+    <section class="dmp-hero">
+      <span class="dmp-tag">Poucas vagas disponíveis esta semana</span>
+      <h1>AGENDE O MELHOR HORÁRIO CLICANDO NA DATA DISPONÍVEL ABAIXO:</h1>
+      <p class="dmp-hero-sub">Selecione um horário disponível no calendário abaixo para confirmar sua Reunião Estratégica gratuita.</p>
+    </section>
+
+    <div class="dmp-cols">
+
+      <section class="dmp-card">
+        <div class="dmp-card-head">
+          <div class="dmp-card-icon" aria-hidden="true">📅</div>
+          <div class="dmp-card-meta">
+            <div class="dmp-card-tag">AGENDAMENTO</div>
+            <h2 class="dmp-card-title">Agende sua Reunião Estratégica Gratuita</h2>
+          </div>
+        </div>
+        <div class="dmp-cal-body">
+          <div class="dmp-loader" id="dmp-loader">
+            <div class="dmp-spinner"></div>
+            <p>Carregando calendário...</p>
+          </div>
+          <!-- Cal inline embed code begins -->
+          <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-reuniao-gratuita"></div>
+          <script type="text/javascript">
+            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+            Cal("init", "reuniao-gratuita", {origin:"https://app.cal.com"});
+            Cal.config = Cal.config || {};
+            Cal.config.forwardQueryParams = true;
+            Cal.ns["reuniao-gratuita"]("inline", {
+              elementOrSelector:"#my-cal-inline-reuniao-gratuita",
+              config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"},
+              calLink: "eduardo-b.-kopeski/reuniao-gratuita",
+            });
+            Cal.ns["reuniao-gratuita"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","theme":"dark"});
+          </script>
+          <!-- Cal inline embed code ends -->
+        </div>
+      </section>
+
+      <aside class="dmp-card">
+        <div class="dmp-card-head">
+          <div class="dmp-card-icon" aria-hidden="true">🎯</div>
+          <div class="dmp-card-meta">
+            <div class="dmp-card-tag">PARA VOCÊ</div>
+            <h2 class="dmp-card-title">Essa reunião é perfeita para empresários e CEOs que querem sair da operação e assumir uma posição mais estratégica no negócio.</h2>
+          </div>
+        </div>
+        <div class="dmp-benefits-body">
+          <p class="dmp-benefits-intro">Nessa reunião estratégica, você vai sair com:</p>
+          <ul class="dmp-benefits-list">
+            <li class="dmp-benefit">
+              <div class="dmp-check" aria-hidden="true">✓</div>
+              <p class="dmp-benefit-text">Diagnóstico estratégico do seu negócio</p>
+            </li>
+            <li class="dmp-benefit">
+              <div class="dmp-check" aria-hidden="true">✓</div>
+              <p class="dmp-benefit-text">Plano de crescimento estruturado e rentável</p>
+            </li>
+            <li class="dmp-benefit">
+              <div class="dmp-check" aria-hidden="true">✓</div>
+              <p class="dmp-benefit-text">Mentoria com quem já viveu os desafios de empreender</p>
+            </li>
+          </ul>
+          <div class="dmp-instruction">
+            <p>Após selecionar o horário, você receberá um e-mail de confirmação. Verifique sua caixa de entrada (e spam) para garantir que recebeu.</p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+    <footer class="dmp-footer">© Eduardo Kopeski · Sessão gratuita · vagas limitadas</footer>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  (function () {
+    var loader = document.getElementById('dmp-loader');
+    if (!loader) return;
+
+    function hideLoader() {
+      if (loader.classList.contains('hidden')) return;
+      loader.classList.add('hidden');
+      setTimeout(function () { loader.style.display = 'none'; }, 500);
+    }
+
+    var calBody = document.querySelector('.dmp-cal-body');
+    if (!calBody) return;
+
+    if (typeof MutationObserver !== 'undefined') {
+      var obs = new MutationObserver(function (mutations) {
+        for (var i = 0; i < mutations.length; i++) {
+          var added = mutations[i].addedNodes;
+          for (var j = 0; j < added.length; j++) {
+            if (added[j].nodeType === 1 && added[j] !== loader) {
+              hideLoader();
+              obs.disconnect();
+              return;
+            }
+          }
+        }
+      });
+      obs.observe(calBody, { childList: true, subtree: true });
+    }
+
+    var poll = 0;
+    var iv = setInterval(function () {
+      poll++;
+      var iframe = calBody.querySelector('iframe');
+      if (iframe && iframe.contentWindow) {
+        hideLoader();
+        clearInterval(iv);
+      }
+      if (poll > 20) clearInterval(iv);
+    }, 500);
+
+    setTimeout(hideLoader, 12000);
+  })();
+</script>
